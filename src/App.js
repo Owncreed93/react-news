@@ -1,8 +1,26 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+
+
+// ************************ CUSTOMIZED COMPONENTS *********************************** //
+
+import Header from './components/Header';
+import Formulario from './components/Formulario';
+
+// ********************************************************************************* //
 
 function App() {
   return (
-    <h1>Noticias</h1>
+    <Fragment>
+
+      <Header titulo="Buscador de Noticias"/>
+
+      <div className="container white" >
+
+        <Formulario />
+
+      </div>
+
+    </Fragment>
   );
 }
 
