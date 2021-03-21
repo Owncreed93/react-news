@@ -1,7 +1,21 @@
 import React from 'react';
+
+
+// ***************************************** STYLES **************************** // 
+
 import styles from './Formulario.module.css'
 
+// ***************************************** HOOKS ***************************** // 
+
+import useSelect from '../hooks/useSelect';
+
+// **************************************************************************** //
+
 const Formulario = () => {
+
+    // USE CUSTOM HOOK
+    const [ categoria, SelectNoticias ] = useSelect();
+
     return ( 
         <div className={`${styles.buscador} row`}>
 
@@ -9,6 +23,9 @@ const Formulario = () => {
 
                 <form>
                     <h2 className={styles.heading}>Encuentra noticias por categor&iacute;a</h2>
+
+                    <SelectNoticias />
+
                     <div className="input-field col s12" >
                         <input
                             type="submit"
